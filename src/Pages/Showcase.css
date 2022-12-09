@@ -1,0 +1,24 @@
+.showcase-container{
+    display:flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.showcase-text{
+    width: 100%;    
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.showcase-text h1{
+    font-size: 50pt;    
+}
+.showcase-text h2{
+    font-size: 50pt;
+    color: #C28B00;
+}
+
+
+@media (max-width){
+
+}

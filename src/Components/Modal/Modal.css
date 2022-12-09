@@ -1,0 +1,152 @@
+.modal-container{
+    display: flex;
+    justify-content: center;    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.modal-wrapper{
+    margin-top: 2rem;
+    padding: 12px;
+    border-radius: 12px;
+    width: 800px;
+    height: 480px;
+    background: white;
+    display:flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+.modal-wrapper .top-left-icon img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2rem;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.modal-wrapper .modal-left label{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.modal-wrapper .modal-left .upload-container{
+    background: whitesmoke;
+    width: 260px;
+    height: 370px;
+    padding: 12px;
+    border-radius: 10px;
+
+}
+.modal-wrapper .modal-left .modal-right{
+    margin-top: 2rem;    
+}
+.modal-wrapper .modal-left .dotted-container{
+    border: 2px dashed gray;    
+    border-radius: 10px;
+    height: 350px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.modal-wrapper .modal-left .dotted-container .upload-text{
+    position: absolute;
+    bottom: 8px;
+    font-size: 9pt;
+    padding: 5px;
+}
+.modal-wrapper .modal-left .dotted-container .upload-icon{
+    position: absolute;
+    top: 7rem;
+    font-size: 9pt;
+}
+.modal-wrapper label input{
+    display: none;
+}
+
+.modal-wrapper .modal-right .section1{    
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;    
+}
+.modal-wrapper .modal-right .section1 .select-bg{
+    background: whitesmoke;    
+    width: 80%;
+    display: flex;
+    border-radius: 10px;
+}
+.modal-wrapper .modal-right .section1 .select-bg select{
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 8px;
+    background: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-wrapper .modal-right .section1 .select-bg select:active{
+    outline: none;
+    background: white;
+}
+.modal-wrapper .modal-right .section1 .select-bg select option{
+    background: white;
+}
+.modal-wrapper .modal-right .section1 .select-bg button{
+    color: whitesmoke;
+    background: #D32F2F;
+    border: none;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    width: 50%;
+    cursor: pointer;
+}
+.modal-wrapper .modal-right .section2{
+    
+    width: 100%;
+}
+.modal-wrapper .modal-right .section2 input, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid grey;
+    color: gray;
+    margin-bottom: 12px;
+    padding: 10px;
+}
+.modal-wrapper .modal-right .section2 input:focus, textarea:focus{
+    outline: none;
+}
+.modal-wrapper .modal-right .section2 .pin-title input::placeholder{
+    font-size: 20pt;
+    font-weight: bold;
+    
+}
+.modal-wrapper .modal-right .section2 .user-profile-pic{
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+}
+.modal-wrapper .modal-right .section2 img{
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 50px;
+}
+.modal-wrapper .modal-right{
+    flex: 2;
+    margin: 20px;
+}
+.modal-wrapper .modal-left{
+    flex: 2;
+    margin: 20px;
+}
+
+
+
+
+@media (max-width:760px){
+    .modal-wrapper{
+        height: 100%;
+    }
+    .modal-wrapper .modal-right .section1{
+        justify-content: center;
+    }
+}

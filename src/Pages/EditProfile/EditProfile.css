@@ -1,0 +1,89 @@
+.user-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 20px;
+}
+.user-container .user-pic-change{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2rem;
+}
+.user-container .user-pic-change .user-pic{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: whitesmoke;
+    padding: 20px;
+    position: relative;
+}
+.user-avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 10rem;
+    position: relative;
+}
+.user-pic div{
+    /* position: absolute;
+    right: 20px;
+    left: 20px;
+    top: .48rem;
+    bottom:0; */
+    font-size: 50pt;
+    text-align: center;
+}
+.user-pic-change label{
+    background: whitesmoke;
+    padding: 8px;
+    border-radius: 30%;;
+}
+.user-container form{
+    margin-top: 2rem;
+    line-height: 30px;
+}
+.user-container form label{
+    font-size: 9pt;
+    font-weight:lighter;
+}
+.user-container form .first-last{
+    display: flex;
+    gap: 15px;
+}
+.user-container form input{
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    border: 1px solid gray;
+    width: 100%;
+}
+.user-container form button{
+    color: white;
+    background: #D32F2F;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+.user-container form button:active{
+    background: rgb(196, 194, 194);
+}
+
+
+
+@media (max-width: 760px){
+    .user-container .user-pic-change .user-pic, .user-avatar{    
+        width: 120px;   
+        height: 120px;
+        padding: 30px;
+        position: relative;
+    }
+    .user-pic div{
+        margin-top: -10px;
+        font-size: 50pt;
+        text-align: center;
+    }
+    
+}

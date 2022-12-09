@@ -1,0 +1,103 @@
+.login-container{
+    position: absolute;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.login-wrapper{
+    width: 25rem;
+    height: 90%;
+    background: white;
+    margin-top: 2rem;
+    border-radius: 20px;
+    padding: 12px;
+    position: relative;
+}
+.login-wrapper .close-img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.login-wrapper .logo{
+    display: flex;
+    justify-content: center;
+}
+.login-wrapper .form-container{
+    text-align: center;
+}
+.login-wrapper .logo img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.form-container form input{
+    width: 60%;
+    height: 2.5rem;
+    border-radius: 15px;
+    border: .5px solid gray;
+    margin-bottom: 8px;
+    padding: 8px;
+    
+}
+.form-container form .btn{
+    width: 60%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background: #D32F2F;
+    color: whitesmoke;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+.form-container form .loading{
+    background: #d19494;
+    width: 60%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;    
+    color: whitesmoke;
+    font-weight: bold;
+    position: relative;
+    cursor: wait;
+}
+.google-container{
+    display: flex;
+    align-items: center;
+    background: whitesmoke;
+    border: 1px solid rgb(230, 230, 230);
+    width: 60%;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 15px;   
+    cursor: pointer;
+}
+.google-container img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+@media (max-width: 760px){
+    .google-container{
+        font-size: 10pt;
+    }
+    
+}

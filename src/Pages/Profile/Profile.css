@@ -1,0 +1,89 @@
+.profile-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+}
+.profile-container .profile{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    padding: 8px;
+    margin-top: 1rem;
+    gap: 12px;
+}
+.profile-container .profile .user-profile{
+    border-radius: 50%;
+    padding: 3px;
+    background: whitesmoke;
+    width:120px;
+    height: 120px;
+    color: #000;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1rem;
+}
+.profile-container .profile .user-profile span{
+    font-size: 40pt;    
+}
+.profile-container .profile .user-info{
+    text-align: center;
+    line-height: 35px;
+}
+.profile-container .profile .user-info h1{
+    font-size: 20pt;
+}
+.profile-container .profile .user-tap{
+    padding: 15px;
+    background: whitesmoke;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.user-tabs .tab-header{
+    display: flex;
+    justify-content: center;
+    font-size: 12.5pt;
+    gap: 20px;
+    line-height: 5rem;
+    
+}
+.created, .saved{
+    cursor: pointer;        
+}
+.user-tabs .tab-header .active-tab{
+    transition: .3s ease-in-out;
+    border-bottom: 4px solid #000;
+    padding-bottom: 5px;
+}
+.saved-space h1, .created-space h1{
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    top: 5rem;
+    bottom: 1rem;
+}
+.created-space, .saved-space{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 10px;
+    justify-content: center;
+    width:80%;
+    text-align: center;
+    position: relative;
+}
+
+
+@media (max-width: 760px){
+    .profile-container .profile{
+        width: 100%;
+    }
+    .created-space{
+        grid-template-columns: repeat(auto-fill, 150px);
+        width: 100%;
+    }
+}
