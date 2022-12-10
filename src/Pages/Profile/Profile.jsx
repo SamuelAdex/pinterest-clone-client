@@ -64,6 +64,7 @@ const Profile = ({setDropdown}) => {
     let userNameIndex = userInfo.username.split('')
 
     //filtering the user email
+    // eslint-disable-next-line no-unused-vars
     const userEmail = userInfo.email.replace('@gmail.com', '')
 
 

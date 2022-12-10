@@ -3,6 +3,7 @@ import {fetching, success, failed} from '../features/pinSlice'
 import axios from 'axios'
 
 const HOSTED_URL = 'https://pinterest-api.cyclic.app'
+// eslint-disable-next-line no-unused-vars
 const LOCAL_HOST = "http://localhost:4000"
 
 

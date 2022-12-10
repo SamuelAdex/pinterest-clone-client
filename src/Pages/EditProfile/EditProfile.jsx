@@ -6,21 +6,21 @@ import {updateUser} from '../../Api/apiCall'
 import './EditProfile.css'
 
 const EditProfile = () => {
-    const {userInfo, error} = useSelector((state)=> state.user)
-    const [userInfoData, setUserInfoData] = useState(null),
+    const {userInfo, error} = useSelector((state)=> state.user),
           [firstname, setFirstname] = useState(''),
           [lastname, setLastname] = useState(''),
           [username, setUsername] = useState(''),
           [avatar, setAvatar] = useState(''),
           [password, setPassword] = useState(""),          
           [showImg, setShowImg] = useState(false),
-          [imageMessage, setImageMessage] = useState(),
-          [img, setImg] = useState(""),
           navigate = useNavigate(),
           
           dispatch = useDispatch();
-    
-    let userNameIndex = userInfo.username.split('')
+          
+          let userNameIndex = userInfo.username.split('')
+          // eslint-disable-next-line no-unused-vars
+          const [imageMessage, setImageMessage] = useState();          
+          const [img, setImg] = useState("");
 
 
     useEffect(()=>{
@@ -33,7 +33,7 @@ const EditProfile = () => {
             }
             try {
                 const {data} = await axios.get(`http://localhost:4000/api/user/auth/user/${userInfo._id}`, config)
-                setUserInfoData(data);
+                //setUserInfoData(data);
                 setFirstname(data.firstname)
                 setLastname(data.lastname)
                 setUsername(data.username)

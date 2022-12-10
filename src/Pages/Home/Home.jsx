@@ -11,7 +11,7 @@ const Home = ({setDropdown}) => {
 
     const navigate = useNavigate()
 
-    const {userInfo} = useSelector((state)=> state.user)
+    //const {userInfo} = useSelector((state)=> state.user)
 
 
     //Fetching all Pin Data
