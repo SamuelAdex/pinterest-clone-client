@@ -15,12 +15,6 @@ const Home = ({setDropdown}) => {
     //const {userInfo} = useSelector((state)=> state.user)
 
 
-    //Fetching all Pin Data
-    useEffect(()=>{        
-        fetchPin()
-        setDropdown(false)
-    },[setDropdown, navigate])
-
     const fetchPin = async ()=>{
         /* const config = {
             Authorization: `Bearer ${userInfo.token}`
@@ -31,6 +25,12 @@ const Home = ({setDropdown}) => {
 
     }
 
+    
+    //Fetching all Pin Data
+    useEffect(()=>{        
+        fetchPin()
+        setDropdown(false)
+    },[setDropdown, navigate])
 
 
     return (

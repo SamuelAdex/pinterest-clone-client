@@ -17,6 +17,7 @@ const Modal = () => {
     const [imageMessage, setImageMessage] = useState('')
     const [img, setImg] = useState('')
     const [filename, setFilename] = useState(null)
+    const [error, setError] = useState("");
 
     const dispatch = useDispatch()
 
@@ -29,7 +30,9 @@ const Modal = () => {
     //Handle Pin Submit for a particular user
     const handlePinSubmit = (e)=>{
         e.preventDefault()
-        if(!title || !desc || !size || !size || !link || !filename) return;       
+        if (!title || !desc || !size || !size || !link || !filename) {
+            setError("Leave no fields Empty");
+        }     
         
 
         const data = {
@@ -42,6 +45,7 @@ const Modal = () => {
         
         createPin(data, dispatch)
         navigate("/home")
+        setError("")
     }    
     
     const storeImage = (pinUrl)=>{
@@ -130,6 +134,7 @@ const Modal = () => {
                             <button>Save</button>
                         </div>
                     </div>
+                    {error && (<small style={{color: 'coral'}}><strong>{error}</strong></small>)}
                     <div className="section2">                            
                             <div className="pin-title">
                                 <input type="text" value={title} onChange={(e)=> setTitle(e.target.value)} placeholder="Add your title" />

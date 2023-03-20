@@ -38,7 +38,7 @@ const Pin = ({pin, pins, index}) => {
                 <div className="pin-content">
                     <p>{pin.desc}</p>
                     <div className="user-pic">
-                        <img src={pinImg} alt="" />
+                        <img src={pin.filename ? pin.filename : pinImg} alt="" />
                         <span>{pin.user.username}</span>
                     </div>
                 </div>
