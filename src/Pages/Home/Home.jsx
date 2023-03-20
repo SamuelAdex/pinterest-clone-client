@@ -12,7 +12,7 @@ const Home = ({setDropdown}) => {
 
     const navigate = useNavigate()
 
-    //const {userInfo} = useSelector((state)=> state.user)
+    const {pending} = useSelector((state)=> state.pin)
 
 
     const fetchPin = async ()=>{
@@ -25,20 +25,26 @@ const Home = ({setDropdown}) => {
 
     }
 
-    
+
     //Fetching all Pin Data
     useEffect(()=>{        
         fetchPin()
         setDropdown(false)
-    },[setDropdown, navigate])
+    },[setDropdown, navigate, pending])
 
 
     return (
         <section className="container">
             <div className="pin-wrapper">
-                {pins.map((pin, index)=> (
-                    <Pin pin={pin} index={index} pins={pins} key={pin._id} />
-                ))}                
+                {!pins ? (
+                    <div className="" style={{textAlign: 'center', fontSize: '50px', color: '#e8e8e8'}}>
+                        <h1>LOADING...</h1>
+                    </div>
+                ) : (
+                    pins.map((pin, index)=> (
+                        <Pin pin={pin} index={index} pins={pins} key={pin._id} />
+                    ))
+                )}                
             </div>            
         </section>
     )

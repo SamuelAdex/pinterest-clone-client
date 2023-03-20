@@ -1,7 +1,7 @@
 
 .img-container{
     
-    border-radius: 20px;
+    border-radius: 10px;
     /* -webkit-box-shadow: -1px 4px 4px 4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px 4px 4px 4px rgba(0, 0, 0, 0.75);
     box-shadow: -1px 4px 4px 4px rgb(228, 226, 226); */
@@ -10,26 +10,29 @@
 .lg-img, .lg-img .overlay{
     width: 200px;
     height: 350px;
-    grid-row-end: 350px;
+    /* grid-row-end: 350px; */
 }
 .md-img, .md-img .overlay{
     width: 200px;
     height: 300px;
-    grid-row-end: 300px;
+    /* grid-row-end: 300px; */
 }
 .sm-img, .sm-img .overlay{
     width: 200px;
     height: 200px;
-    grid-row-end: 200px;
+    /* grid-row-end: 200px; */
 }
 .pin-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;          
 }
+
 .pin-content{
     width: 200px;
     padding: 8px;    
+
 }
 .pin-content p{
     overflow: hidden;   
@@ -43,7 +46,7 @@
 .pin-content .user-pic img{
     width: 30px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 50px;
     margin-right: 5px;
     margin-top: 5px;
 }
@@ -59,7 +62,7 @@
     padding: 12px;  
     opacity: 0; 
     transition: 0.5s ease;
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
 }
 .pin-footer{

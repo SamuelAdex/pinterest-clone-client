@@ -2,21 +2,17 @@
     display: flex;
     justify-content: center;
 }
-/* .pin-wrapper{
-    padding: 8px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* .pin-wrapper{      
+    column-count: 4;
+    column-gap: 10px;
 } */
 .pin-wrapper{
     padding: 8px;
     width: 80%;    
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    /* grid-auto-rows: 10px; */
+    grid-template-columns: repeat(auto-fill, 200px);        
     justify-content: center;
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 

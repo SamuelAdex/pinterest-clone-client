@@ -22,7 +22,7 @@ const Pin = ({pin, pins, index}) => {
             animate={{opacity: [0, 1]}} 
             transition={{duration: 0.3, delay: index * 0.3}}
             >
-                <div  className={`img-container ${pin.size === 'large' && 'lg-img'} ${pin.size === 'medium' && 'md-img'} ${pin.size === 'small' && 'sm-img'}`} style={{background: `url(${pinImg})`, backgroundSize: "cover"}}>
+                <div  className={`img-container ${pin.size === 'large' && 'lg-img'} ${pin.size === 'medium' && 'md-img'} ${pin.size === 'small' && 'sm-img'}`} style={{background: `url(${pin.filename ? pin.filename : pinImg})`, width: '100%', backgroundSize: "cover"}}>
                     <div className="overlay">
                         <div className="pin-footer">
                             <div className="pin-save">
@@ -38,7 +38,7 @@ const Pin = ({pin, pins, index}) => {
                 <div className="pin-content">
                     <p>{pin.desc}</p>
                     <div className="user-pic">
-                        <img src={pin.filename ? pin.filename : pinImg} alt="" />
+                        <img src={pinImg} alt="" />
                         <span>{pin.user.username}</span>
                     </div>
                 </div>

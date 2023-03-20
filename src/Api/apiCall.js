@@ -105,6 +105,7 @@ export const updateUser = async (user, dispatch)=>{
 export const createPin = async (pin, dispatch)=>{
     const userInfo = JSON.parse(localStorage.getItem('userInfo'))
 
+    dispatch(fetching())
     try {
         const config = {
             headers:{
@@ -113,7 +114,6 @@ export const createPin = async (pin, dispatch)=>{
             }
         }
 
-        dispatch(fetching())
 
         const {data} = await axios.post(`${process.env.REACT_APP_HOSTED_URL}/api/pin/createpin`, pin, config)
         dispatch(success(data))        

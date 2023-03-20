@@ -4,7 +4,7 @@ import {createSlice} from '@reduxjs/toolkit'
 const pinSlice = createSlice({
     name: 'pin',
     initialState:{
-        pinObject:{},
+        pinObject:[],
         pending: false,
         error: null
     },
