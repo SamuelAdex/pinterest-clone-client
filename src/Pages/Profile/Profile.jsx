@@ -23,7 +23,7 @@ const Profile = ({setDropdown}) => {
                 }
             }
             try {
-                const{data} = await axios(`http://localhost:4000/api/pin/mypins`, config)
+                const{data} = await axios(`${process.env.REACT_APP_HOSTED_URL}/api/pin/mypins`, config)
                 setUserPins(data)
                 //console.log(data);
             } catch (error) {

@@ -3,6 +3,9 @@ import {motion} from 'framer-motion/dist/framer-motion'
 import './Pin.css'
 import pinImg from '../../user.jpeg'
 import upRight from '../../up_right.png'
+
+
+
 const Pin = ({pin, pins, index}) => {
 
 

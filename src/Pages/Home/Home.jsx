@@ -25,7 +25,7 @@ const Home = ({setDropdown}) => {
         /* const config = {
             Authorization: `Bearer ${userInfo.token}`
         } */
-        const {data} = await axios.get('http://localhost:4000/api/pin/pins')
+        const {data} = await axios.get(`${process.env.REACT_APP_HOSTED_URL}/api/pin/pins`)
         setPins(data)
         console.log(data)
 

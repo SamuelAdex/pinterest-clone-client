@@ -32,7 +32,7 @@ const EditProfile = () => {
                 }
             }
             try {
-                const {data} = await axios.get(`http://localhost:4000/api/user/auth/user/${userInfo._id}`, config)
+                const {data} = await axios.get(`${process.env.REACT_APP_HOSTED_URL}/api/user/auth/user/${userInfo._id}`, config)
                 //setUserInfoData(data);
                 setFirstname(data.firstname)
                 setLastname(data.lastname)

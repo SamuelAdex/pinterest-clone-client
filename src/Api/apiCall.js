@@ -1,10 +1,10 @@
-import {regStart, regSuccess, regError, logout} from '../features/userSlice'
-import {fetching, success, failed} from '../features/pinSlice'
-import axios from 'axios'
+import { regStart, regSuccess, regError, logout } from '../features/userSlice';
+import {fetching, success, failed} from '../features/pinSlice';
+import axios from 'axios';
 
-const HOSTED_URL = 'https://pinterest-api.cyclic.app'
+// export const HOSTED_URL = 'https://pinterest-api.cyclic.app';
 // eslint-disable-next-line no-unused-vars
-const LOCAL_HOST = "http://localhost:4000"
+// export const LOCAL_HOST = "http://localhost:4000";
 
 
 export const userReg = async (user, dispatch)=>{
@@ -17,7 +17,7 @@ export const userReg = async (user, dispatch)=>{
 
         dispatch(regStart())
 
-        const {data} = await axios.post(`${HOSTED_URL}/api/user/auth`, user, config)
+        const {data} = await axios.post(`${process.env.REACT_APP_HOSTED_URL}/api/user/auth`, user, config)
         dispatch(regSuccess(data))
         localStorage.setItem('userInfo', JSON.stringify(data))
     } catch (error) {
@@ -37,7 +37,7 @@ export const userLogin = async (user, dispatch)=>{
 
         dispatch(regStart())
 
-        const {data} = await axios.post(`${HOSTED_URL}/api/user/login`, user, config)
+        const {data} = await axios.post(`${process.env.REACT_APP_HOSTED_URL}/api/user/login`, user, config)
         dispatch(regSuccess(data))
         localStorage.setItem('userInfo', JSON.stringify(data))
     } catch (error) {
@@ -59,7 +59,7 @@ export const googleAuth = async (user, dispatch)=>{
 
         dispatch(regStart())
 
-        const {data} = await axios.post(`${HOSTED_URL}/api/user/google-login`, user, config)
+        const {data} = await axios.post(`${process.env.REACT_APP_HOSTED_URL}/api/user/google-login`, user, config)
         dispatch(regSuccess(data))
         localStorage.setItem('userInfo', JSON.stringify(data))
     } catch (error) {
@@ -88,7 +88,7 @@ export const updateUser = async (user, dispatch)=>{
         }
         dispatch(regStart())
 
-        const {data} = await axios.put(`${HOSTED_URL}/api/user/update/${userInfo._id}`, user, config)
+        const {data} = await axios.put(`${process.env.REACT_APP_HOSTED_URL}/api/user/update/${userInfo._id}`, user, config)
         regSuccess(data)
         localStorage.setItem('userInfo', JSON.stringify(data))
         console.log(data)
@@ -115,7 +115,7 @@ export const createPin = async (pin, dispatch)=>{
 
         dispatch(fetching())
 
-        const {data} = await axios.post(`${HOSTED_URL}/api/pin/createpin`, pin, config)
+        const {data} = await axios.post(`${process.env.REACT_APP_HOSTED_URL}/api/pin/createpin`, pin, config)
         dispatch(success(data))        
     } catch (error) {
         const message = error.message && error.response.data.message ? error.response.data.message : error.message; 
