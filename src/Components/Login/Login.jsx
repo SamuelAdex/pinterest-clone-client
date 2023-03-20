@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
@@ -85,24 +86,6 @@ const Login = ({setLoginOpen, setSignUpOpen}) => {
                             {error && <small style={{color: 'red', margin: '10px', fontWeight: 'bold'}}>{error}</small>}
                             <button type="submit" className={pending ? "loading": "btn"}>Login</button>
                         </form><br />
-                        <center>Or</center><br />
-                        <GoogleLogin 
-                            clientId="940077581329-na0fie2lmjsnihmfer9fdp9dflh2suhe.apps.googleusercontent.com"
-                            render={(renderProps) => (
-                                <div 
-                                className="google-container" 
-                                onClick={renderProps.onClick} 
-                                disabled={renderProps.disabled} 
-                                /* startIcon={<img src={googleImg} alt="" />} */ >
-                                    <img src={googleImg} alt="" />
-                                    <span>Continue with Google</span>
-                                </div>
-                            )}
-                            onSuccess={googleSuccess}
-                            onFailure={googleSuccess}
-                            cookiePolicy="single_host_origin"
-                        />
-                        <br />
                         <small>Not a member? <span style={{color: '#D32F2F', fontWeight: 'bold', cursor: 'pointer'}} onClick={signModal}>SignUp</span></small>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
@@ -68,11 +69,6 @@ const Signup = ({setSignUpOpen, setLoginOpen}) => {
                         {error && <small style={{color: 'red', margin: '10px', fontWeight: 'bold'}}>{error}</small>}
                         <button type="submit" className={pending ? "loading": "btn"}>Continue</button>
                     </form><br />
-                    <center>Or</center><br />
-                    <div className="google-container">
-                        <img src={googleImg} alt="" />
-                        <span>Continue with Google</span>
-                    </div><br />
                     <small>Already a member? <span style={{color: '#D32F2F', fontWeight: 'bold', cursor: 'pointer'}} onClick={logModal}>Log In</span></small>
                 </div>
             </div>

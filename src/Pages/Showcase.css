@@ -1,6 +1,7 @@
 .showcase-container{
-    display:flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    height: 60vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
@@ -19,6 +20,16 @@
 }
 
 
-@media (max-width){
-
+@media (max-width: 650px){
+    .showcase-container{
+        height: 80vh;
+        display: grid;
+        place-items: center;
+    }
+    .showcase-text h1{
+        font-size: 35pt;
+    }
+    .showcase-text h2{
+        font-size: 35pt;
+    }
 }

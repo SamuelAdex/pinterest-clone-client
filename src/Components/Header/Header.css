@@ -121,7 +121,7 @@ nav{
 
 
 @media (max-width:760px){
-    .nav-menu{
+    .nav-menu ul li:nth-child(1), li:nth-child(2), li:nth-child(3){
         display: none;
     }
 }

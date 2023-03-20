@@ -2,6 +2,7 @@ import React from 'react'
 import './Showcase.css'
 
 const Showcase = () => {
+    console.log(process.env.REACT_APP_HOSTED_URL)
     return (
         <section className="showcase-container">
             <div className="showcase-text">
