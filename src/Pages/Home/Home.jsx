@@ -36,9 +36,13 @@ const Home = ({setDropdown}) => {
     return (
         <section className="container">
             <div className="pin-wrapper">
-                {!pins ? (
+                {pending ? (
                     <div className="" style={{textAlign: 'center', fontSize: '50px', color: '#e8e8e8'}}>
                         <h1>LOADING...</h1>
+                    </div>
+                ) : !pins ? (
+                    <div className="" style={{textAlign: 'center', fontSize: '50px', color: '#e8e8e8'}}>
+                        <h1>NOTHING TO SEE HERE</h1>
                     </div>
                 ) : (
                     pins.map((pin, index)=> (
